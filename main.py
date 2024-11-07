@@ -160,7 +160,7 @@ if not data.empty:
 
     # Graph view of the filtered data
     st.subheader('Graph View of Filtered Data')
-    fig_table = px.bar(editable_data, x='year', y=['size', 'capture_size', 'yoy_growth'], title='Filtered Data Overview')
+    fig_table = px.bar(editable_data, x='year', y=['market_size', 'total_addressable_market', 'serviceable_addressable_market', 'serviceable_obtainable_market'], title='Market Size Overview (TAM, SAM, SOM)')
     st.plotly_chart(fig_table)
 
     # Export filtered data
@@ -179,7 +179,7 @@ if not data.empty:
 
     # Visualize historical trends
     st.subheader('Historical YoY Growth')
-    fig = px.line(editable_data, x='year', y='yoy_growth', title='YoY Growth Over Time')
+    fig = px.line(editable_data, x='year', y=['yoy_growth', 'market_size', 'total_addressable_market', 'serviceable_addressable_market', 'serviceable_obtainable_market'], title='Historical YoY Growth & Market Size Cuts (TAM, SAM, SOM)')
     st.plotly_chart(fig)
 
     # Prepare data for modeling
