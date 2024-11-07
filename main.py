@@ -247,3 +247,4 @@ try:
         st.write('Data not available.')
 except Exception as e:
     st.write('Error fetching data from Data Commons:', str(e))
+
