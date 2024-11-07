@@ -2,7 +2,6 @@ streamlit
 pandas  
 numpy  
 plotly 
-scikit-learn
-sklearn 
+scikit-learn 
 random
 requests
